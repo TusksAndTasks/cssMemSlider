@@ -6,6 +6,7 @@ body{
     height: 100%;
     display: flex;
     justify-content: center;
+    background: rgb(98, 204, 236);
 }
 
 .container{
@@ -19,7 +20,7 @@ body{
 input{
     opacity: 0;
     position: relative;
-    top: 90%;
+    top: 92%;
     cursor: pointer;
     height: 6.25%;
     width: 4.1%;
@@ -30,7 +31,7 @@ input{
 
   .checkmark{
     position: relative;
-    top: 90%;
+    top: 92%;
     margin-bottom:0.6%;
     margin-right: 1.3%;
     height: 4.5%;
@@ -81,4 +82,55 @@ input{
 
 .forth-button:hover ~ .forth-checkmark {
     background: cornsilk;
+}
+
+.slider{
+    display: flex;
+    width: 400%;
+    overflow: hidden;
+    height: 92%;
+    position: relative;
+    bottom:8%
+}
+
+.picture{
+    width: 100%;
+    height: 100%;
+}
+
+.first{
+    background: url(assets/Desktop/First-Slide.jpg);
+}
+
+.second{
+    background: url(assets/Desktop/Second-Slide.jpg);
+}
+
+.third{
+    background: url(assets/Desktop/Third-Slide.jpg);
+}
+
+.forth{
+    background: url(assets/Desktop/Forth-Slide.jpg);
+}
+
+
+.first-button:checked ~ .slider{
+    transform: translate(0, 0);
+    transition: 0.5s;
+}
+
+.second-button:checked ~ .slider{
+    transform: translate(-25%, 0);
+    transition: 0.5s;
+}
+
+.third-button:checked ~ .slider{
+    transform: translate(-50%, 0);
+    transition: 0.5s;
+}
+
+.forth-button:checked ~ .slider{
+    transform: translate(-75%, 0);
+    transition: 0.5s;
 }
