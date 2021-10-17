@@ -53,13 +53,21 @@ input{
 	background: black;
   }
 
+
+
   .first-button:checked ~ .first-checkmark::after {
-      display: block;
+    display: block;
   }
 
   .first-button:hover ~ .first-checkmark{
     background: cornsilk;
 }
+
+  .first-button:active ~ .first-checkmark{
+    background: rgb(180, 179, 172);
+  }
+
+
 
   .second-button:checked ~ .second-checkmark::after {
     display: block;
@@ -69,21 +77,39 @@ input{
     background: cornsilk;
 }
 
-.third-button:checked ~ .third-checkmark::after {
+  .second-button:active ~ .second-checkmark {
+    background:rgb(180, 179, 172);
+}
+
+
+
+  .third-button:checked ~ .third-checkmark::after {
     display: block;
 }
 
-.third-button:hover ~ .third-checkmark {
+  .third-button:hover ~ .third-checkmark {
     background: cornsilk;
 }
 
-.forth-button:checked ~ .forth-checkmark::after {
+  .third-button:active ~ .third-checkmark {
+    background: rgb(180, 179, 172);
+}
+
+
+
+  .forth-button:checked ~ .forth-checkmark::after {
     display: block;
 }
 
-.forth-button:hover ~ .forth-checkmark {
+  .forth-button:hover ~ .forth-checkmark {
     background: cornsilk;
 }
+
+  .forth-button:hover ~ .forth-checkmark{
+    background:rgb(180, 179, 172);
+}
+
+
 
 .slider{
     display: flex;
@@ -112,19 +138,19 @@ input{
     height: 100%;
 }
 
-.first{
+.first-picture{
     background: url(assets/Desktop/First-Slide.jpg);
 }
 
-.second{
+.second-picture{
     background: url(assets/Desktop/Second-Slide.jpg);
 }
 
-.third{
+.third-picture{
     background: url(assets/Desktop/Third-Slide.jpg);
 }
 
-.forth{
+.forth-picture{
     background: url(assets/Desktop/Forth-Slide.jpg);
 }
 
@@ -182,4 +208,71 @@ input{
     opacity: 1;
     top:-16%;
     transition: 0.5s;
+}
+
+
+@media (max-width:420px) {
+   .container{
+       width: 300px;
+   }
+
+   .slider{
+       height: 43.75%;
+   }
+   
+   .first-picture{
+       background: url(assets/Mobile/First-Slide.jpg);
+   }
+
+   .second-picture{
+       background: url(assets/Mobile/Second-Slide.jpg);
+   }
+
+   .third-picture{
+       background: url(assets/Mobile/Third-Slide.jpg);
+   }
+
+   .forth-picture{
+       background: url(assets/Mobile/Forth-Slide.jpg);
+   }
+
+   input{
+       width: 8.3%;
+       opacity: 0;
+       left:1%;
+       margin: -0.5%;
+       top:48.25%;
+   }
+
+   .checkmark{
+       width: 6%;
+       right: 32%;
+       top:48.25%;
+   }
+   
+   .text{
+       top: 20%;
+   }
+
+.first-button:checked ~ .first-text{
+    top:6.75%;
+}
+
+.second-button:checked ~ .second-text{
+    top: 1.75%;
+}
+
+.third-button:checked ~ .third-text{
+    top:-3.25%;
+}
+
+.forth-button:checked ~ .forth-text{
+    top:-7.25%;
+}
+
+.border{
+    height: 44.5%;
+    top: -70.5%;
+}
+   
 }
