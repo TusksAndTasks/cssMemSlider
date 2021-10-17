@@ -1,5 +1,6 @@
 html{
     height: 400px;
+    padding-bottom: 100px;
 }
 
 body{
@@ -88,9 +89,22 @@ input{
     display: flex;
     width: 400%;
     overflow: hidden;
-    height: 92%;
+    height: 87.5%;
     position: relative;
-    bottom:8%
+    bottom:8%;
+}
+
+.border{
+    content: "";
+    width: 102%;
+    height: 91.4%;
+    border: 5px solid rgb(98, 204, 236);
+    border-radius: 5%;
+    position: relative;
+    top: -116.3%;
+    right: 1%;
+    display: inline-block;
+    box-sizing: border-box;
 }
 
 .picture{
@@ -132,5 +146,40 @@ input{
 
 .forth-button:checked ~ .slider{
     transform: translate(-75%, 0);
+    transition: 0.5s;
+}
+
+.text{
+    position: relative;
+    top:3.5%;
+    opacity: 0;
+    display: block;
+    text-align: start;
+    width: fit-content;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: rgb(156, 110, 23);
+}
+
+.first-button:checked ~ .first-text{
+    top:-2%;
+    opacity: 1;
+    transition: 0.5s;
+}
+
+.second-button:checked ~ .second-text{
+    top: -7%;
+    opacity: 1;
+    transition: 0.5s;
+}
+
+.third-button:checked ~ .third-text{
+    opacity: 1;
+    top:-12%;
+    transition: 0.5s;
+}
+
+.forth-button:checked ~ .forth-text{
+    opacity: 1;
+    top:-16%;
     transition: 0.5s;
 }
